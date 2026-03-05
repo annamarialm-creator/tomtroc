@@ -39,9 +39,8 @@ class AuthController
 
             $_SESSION['user_id'] = $user['id'];
 
-            echo "Connexion réussie";
-
-            return;
+           header('Location: ?route=account');
+           exit;
         }
 
         echo "Email ou mot de passe incorrect";
