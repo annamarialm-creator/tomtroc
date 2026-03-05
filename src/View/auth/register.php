@@ -1,3 +1,5 @@
+<?php require __DIR__ . '/../layout/header.php'; ?>
+
 <h1>Inscription</h1>
 
 <form method="POST" action="?route=register">
@@ -13,4 +15,11 @@
 
     <button type="submit">S'inscrire</button>
 
+    <p>
+        Déjà inscrit ?
+        <a href="?route=login">Connectez-vous</a>
+    </p>
+
 </form>
+
+<?php require __DIR__ . '/../layout/footer.php'; ?>

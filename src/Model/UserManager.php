@@ -45,5 +45,4 @@ public function findById($id)
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
-
 }

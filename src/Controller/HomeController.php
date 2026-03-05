@@ -1,17 +1,15 @@
 <?php
 
+require_once __DIR__ . '/../Model/BookManager.php';
 
 class HomeController
 {
     public function index()
-{
-    $pdo = Database::getConnection();
+    {
+        $bookManager = new BookManager();
 
-    $stmt = $pdo->query("SELECT username FROM users LIMIT 1");
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        $latestBooks = $bookManager->findLatestBooks(4);
 
-    $username = $result['username'];
-
-    require __DIR__ . '/../View/home.php';
-}
+        require __DIR__ . '/../View/home.php';
+    }
 }

@@ -1,3 +1,5 @@
+<?php require __DIR__ . '/../layout/header.php'; ?>
+
 <h1>Ajouter un livre</h1>
 
 <form method="POST" action="?route=create-book">
@@ -20,3 +22,5 @@
     <button type="submit">Valider</button>
 
 </form>
+
+<?php require __DIR__ . '/../layout/footer.php'; ?>

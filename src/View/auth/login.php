@@ -1,3 +1,5 @@
+<?php require __DIR__ . '/../layout/header.php'; ?>
+
 <h1>Connexion</h1>
 
 <form method="POST" action="?route=login">
@@ -10,4 +12,11 @@
 
     <button type="submit">Se connecter</button>
 
+    <p>
+        Pas de compte ?
+        <a href="?route=register">Inscrivez-vous</a>
+    </p>
+
 </form>
+
+<?php require __DIR__ . '/../layout/footer.php'; ?>

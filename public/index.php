@@ -44,6 +44,36 @@ switch ($route) {
         $controller->create();
         break;
 
+    case 'edit-book':
+        $controller = new BookController();
+        $controller->edit();
+        break;
+
+    case 'delete-book':
+        $controller = new BookController();
+        $controller->delete();
+        break;
+
+    case 'books':
+        require_once __DIR__ . '/../src/Controller/BookListController.php';
+        $controller = new BookListController();
+        $controller->index();
+        break;
+
+    case 'book':
+        require_once __DIR__ . '/../src/Controller/BookDetailController.php';
+        $controller = new BookDetailController();
+        $controller->show();
+        break;
+
+    case 'profile':
+        require_once __DIR__ . '/../src/Controller/UserProfileController.php';
+        $controller = new UserProfileController();
+        $controller->show();
+        break;
+
     default:
-        echo "404 - Page not found";
+    http_response_code(404);
+    require __DIR__ . '/../src/View/errors/404.php';
+    break;
 }
